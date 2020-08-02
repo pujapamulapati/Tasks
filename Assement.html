@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function passworddvalidate()
+{
+var pwd= document.getElementById('password').value;
+var pwd1= document.getElementById('password1').value;
+var isUppercase;
+var isLowercase;
+var isNumber;
+var isSpecialcharacter;
+var ischeck;
+var check;
+if(pwd.length<8)
+{
+ischeck="Invalid";
+}
+else
+{
+for(i=0;i<pwd.length;i++)
+{
+if(pwd[i] >='A' && pwd[i]<='Z')
+{
+isUppercase="Valid";
+break;
+}
+}
+if(isUppercase== "Valid")
+{
+for(i=0;i<pwd.length;i++)
+{
+if(pwd[i] >='a' && pwd[i]<='z')
+{
+isLowercase="Valid";
+break;
+}
+}
+}
+if(isUppercase=="Valid" && isLowercase=="Valid")
+{
+for(i=0;i<pwd.length;i++)
+{
+if(pwd[i] >='0' && pwd[i]<='9')
+{
+isNumber="Valid";
+break;
+}
+}
+}
+if(isUppercase=="Valid" && isLowercase =="Valid" && isNumber =="Valid")
+for(i=0;i<pwd.length;i++)
+{
+if((pwd[i]>='!' && pwd[i]<='/')|| (pwd[i]>=':' && pwd[i]<='@') || (pwd[i]>='[' && pwd[i]<='`') || (pwd[i]>='{' && pwd[i]<='~'))
+{
+isSpecialcharacter="Valid";
+break;
+}
+}
+
+if(isUppercase == "Valid" && isLowercase == "Valid" && isNumber == "Valid" && isSpecialcharacter == "Valid")
+{
+ischeck = "Valid";
+}
+}
+if(ischeck== "Valid" && pwd==pwd1)
+{
+alert('Sucessfully Registrated');
+
+}
+else
+{
+alert('Password Not Matched');
+}
+}
+types=["Postgraduation","Graduation"];
+function filldd()
+{
+var typeDD=document.getElementById('type');
+for(i=0;i<types.length;i++){
+var ele=document.createElement('option');
+ele.text=types[i];
+typeDD.add(ele,i+1)
+}
+}
+data=[['Post Graduation Masters in arts','Post Graduation Masters Computer Science','Post Graduation Masters VLSI','post graduation Masters Communications'],['Computer Science Engineering','Electronic Engineering','Bachelor of Arts','Mechanical Engineering']];
+function fillData()
+{
+var typeDDN=document.getElementById('type');
+var selectedIdx= typeDDN.selectedIndex;
+console.log(selectedIdx);
+var dataDD=document.getElementById('dd');
+dataDD.innerText=null;
+for(i=0;i<data[selectedIdx-1].length;i++)
+{
+var ele=document.createElement('option');
+ele.text=data[selectedIdx-1][i];
+dataDD.add(ele,i+1)
+}
+}
+
+function alpha(e)
+{
+if(!( e.which >= 65 && e.which <=122 ))
+{
+e.preventDefault();
+}
+}
+</script>
+</head>
+<body bgcolor="#8de9f7">
+<center>
+<font size="80px" > Registration Form </font>
+<br>
+<br>
+<img src="Minions.png">
+<form onSubmit = "return passworddvalidate(this)">
+Enter Password: <input type="password" id="password" required>  
+<br>
+<br>
+Confirm Password: <input type="text" id="password1" required>
+<br>
+<br>
+<body onload="filldd()">
+<center>
+Select Postgraduation/Graduation:
+<select id="type" onchange="fillData()">
+	<option> Select Type </option>
+</select>
+<br>
+<br>
+Course:
+<select id="dd">
+<option> select </option>
+</select>
+<br>
+<br>
+Date of Birth:<input type="date" name="DOB" placeholder="Date 0f birth" max="2002-08-01" required>
+<br>
+<br>
+Enter Employee Name:<input type="text" id="mytxt" onkeypress ="alpha(event)" required>
+<br>
+<br>
+<input type="submit" value="Submit">
+<br>
+<br>
+</center>
+</body>
+</body>
+</html>
+
+
