@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+"></script>
+
+<script type="text/javascript">
+
+
+$(function(){
+$("#divtag").click(function(){
+$("div").hide();
+});
+$("#ptag").click(function(){
+$("p").hide();
+});
+$("#ptagclass").click(function(){
+$("p.abc").hide();
+});
+$("#classabc").click(function(){
+$("p.abc").hide();
+$("div.abc").hide();
+});
+$("#fadein").click(function(){
+$("div").fadeIn();
+});
+$("#moveright").click(function(){
+$("div").animate({
+'marginLeft' : "+=30px" //moves right
+});
+});
+$("#changestyle").click(function(){
+$("p").css("color","blue");
+});
+
+$("#SlideU").click(function(){
+$("div").slideToggle("slow");
+});
+$("#SlideD").click(function(){
+$("div").slideToggle("slow");
+});
+$("#SlideUD").click(function(){
+$("p").slideToggle("slow");
+});
+
+});
+</script>
+</head>
+<body>
+<p> Push yourself, because no one else is going to do it for you.</p>
+<br>
+<div> Success doesn’t just find you. You have to go out and get it. </div>
+<br>
+<div class="abc">  Dream it. Believe it. Build it.</div>
+<br>
+<p class="abc"> Don’t stop when you’re tired. Stop when you’re done. </p>
+<br> 
+<br>
+<input type="submit" value="HideDiv" id="divtag">
+<input type="submit" value="HidePtag" id="ptag">
+<input type="submit" value="HidePTag" id="ptagclass">
+<input type="submit" value="HideClass" id="classabc">
+<input type="submit" value="FadeInDivClass" id= "fadein">
+<input type="submit" value="MoveDIV" id= "moveright">
+<input type="submit" value="ChangeStylePTag" id="changestyle">
+<input type="submit" value="SlideUP" id="SlideU">
+<input type="submit" value="SlideDown" id="SlideD">
+<input type="submit" value="SlideUPDown" id="SlideUD">
+</body>
+</html>
