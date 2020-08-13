@@ -1,16 +1,16 @@
 package task8;
 
-public class UpperCaseString {
+public class LowerCaseString {
 	String myString(String str)
 	{
 		int b;
 		char[] arr= str.toCharArray();
 		for(int i=0;i<str.length();i++)
 		{
-			if(arr[i]>='a' && arr[i]<='z')
+			if(arr[i]>='A' && arr[i]<='Z')
 			{
 				b=arr[i];
-				b=b-32;
+				b=b+32;
 				arr[i]=(char) b;
 			}
 		}
@@ -20,10 +20,9 @@ public class UpperCaseString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		UpperCaseString scm=new UpperCaseString();
-		  String data=scm.myString("Hello World");
-	 	 System.out.println(data);
-
+         LowerCaseString scm=new LowerCaseString();
+         String data=scm.myString("Hello World");
+ 		System.out.println(data);
 	}
 
 }

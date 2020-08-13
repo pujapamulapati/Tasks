@@ -1,8 +1,8 @@
-package task6;
+package task8;
 
 
-
-public class ReverseString {
+public class ReverseString
+{
 	String myString(String str)
 	{
 		String a="";
