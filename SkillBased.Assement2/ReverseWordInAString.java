@@ -14,7 +14,7 @@ void myString(String str)
        {
            reverse=reverse+word.charAt(j);
        }
-       reversestring=reversestring+reverse+" ";
+       reversestring=reversestring+reverse+"\n";
    }   
    System.out.println(reversestring);
 }
