@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function col()
+{
+colour=['What is your mother name?','What is the name of your first pet?','What was your first car?','What elementary school did you attend?','What is the name of the town where you were born?'];
+var ddd =document.getElementById('dd');
+for(i=0;i<colour.length;i++)
+{
+var ele=document.createElement('option');
+ele.text=colour[i];
+ddd.add(ele,i+1)
+}
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+<form method="post" action="RegistrationForm">
+Employee Name:<input type="text" name="Name">
+<br>
+<br>
+Employee ID:<input type="text" name="ID" >
+<br>
+<br>
+Employee Address:<input type="text" name="Address">
+<br>
+<br>
+Password:<input type="password" name="Password">
+<br>
+<br>
+Password Confirm:<input type="password" name="ConfirmPassword">
+<br>
+<br>
+Gender:
+Female<input type="radio" value="Female" name="Gender">
+Male<input type="radio" value="Male" name="Gender">
+<br>
+<br>
+Languages Know:
+English<input type="checkbox" value="English" name="languagesKnown">
+Hindi<input type="checkbox" value="Hindi" name="languagesKnown">
+Kannada<input type="checkbox" value="kannada" name="languagesKnown">
+Telugu<input type="checkbox" value="telugu" name="languagesKnown">
+<br>
+<br>
+Date Of Birth:
+<input type="date" name="Date Of Birth">
+<br>
+<br>
+Security Question:
+<body onload="col()">
+<select id="dd" name="SecurityQuestion">
+<option> Select Questions</option>
+</select>
+</body>
+<br>
+<br>
+Security Answer: <input type="text" name="SecurityAnswer">
+<br>
+<br>
+<input type="submit">
+</form>
+</body>
+</html>
