@@ -1,0 +1,18 @@
+create table StudentsData
+(
+StudentName varchar(20),
+StudentID int,
+Semester varchar(10),
+Department varchar(10)
+);
+
+create table Attendence
+(
+StudentName varchar(20),
+StudentID int,
+Semester varchar(10),
+Department varchar(10),
+AttendenceOfStudent varchar(10),
+DateOfAttendence date
+);
+
