@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+input[type=text] 
+{
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Syncopate);
+
+body { 
+  background: AliceBlue;
+  text-align: center;
+  padding: 20px 20px;
+}
+h1 {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 0.9;
+  padding: 10px;
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    skyblue,
+    #111
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
